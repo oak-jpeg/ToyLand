@@ -1,0 +1,364 @@
+/* Confirmation Section Styles */
+.confirmation-section {
+    padding: 40px 0 60px;
+}
+
+.confirmation-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 40px;
+}
+
+/* ปรับแต่ง Breadcrumb */
+.breadcrumb {
+    background-color: #f8f8f8;
+    padding: 12px 0;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee;
+}
+
+.breadcrumb ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumb ul li {
+    position: relative;
+    font-size: 14px;
+    color: #777;
+}
+
+.breadcrumb ul li:not(:last-child) {
+    margin-right: 30px;
+}
+
+.breadcrumb ul li:not(:last-child)::after {
+    content: '>';
+    position: absolute;
+    right: -18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ccc;
+}
+
+.breadcrumb ul li a {
+    color: #4ECDC4;
+    text-decoration: none;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb ul li a:hover {
+    color: #FF6B6B;
+}
+
+.breadcrumb ul li a[href="index.html"]::before {
+    content: '\f015'; /* Font Awesome home icon */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    margin-right: 5px;
+    font-size: 13px;
+}
+
+.breadcrumb ul li:last-child {
+    font-weight: 500;
+    color: #333;
+}
+
+/* ส่วนหัวของหน้ายืนยัน */
+.confirmation-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.confirmation-header .check-icon {
+    width: 80px;
+    height: 80px;
+    background-color: #4ECDC4;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.confirmation-header .check-icon i {
+    color: white;
+    font-size: 40px;
+}
+
+.confirmation-header i {
+    font-size: 64px;
+    color: #4ECDC4;
+    margin-bottom: 20px;
+}
+
+.confirmation-header h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.confirmation-header p {
+    color: #777;
+    font-size: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.order-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+/* กล่องข้อมูล */
+.order-info-boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.order-info-box {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    height: 100%;
+}
+
+.order-info-box h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.order-info-box p {
+    margin-bottom: 8px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.order-info-box p:last-child {
+    margin-bottom: 0;
+}
+
+.order-info-box .order-number {
+    font-weight: bold;
+    color: #FF6B6B;
+}
+
+.order-info-box .date {
+    color: #777;
+}
+
+.order-items {
+    margin-bottom: 25px;
+}
+
+.order-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.order-item:last-child {
+    border-bottom: none;
+}
+
+.order-item-name {
+    flex: 2;
+    font-weight: 500;
+}
+
+.order-item-quantity {
+    flex: 1;
+    text-align: center;
+    color: #555;
+}
+
+.order-item-price {
+    flex: 1;
+    text-align: right;
+    font-weight: 500;
+}
+
+.order-number, .shipping-details, .payment-details {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.order-number h3, .shipping-details h3, .payment-details h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    color: #333;
+}
+
+.order-number p, .shipping-details p, .payment-details p {
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.order-summary {
+    margin-top: 30px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 25px;
+}
+
+.order-summary h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.order-summary table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.order-summary table th, 
+.order-summary table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.order-summary table th {
+    background-color: #f5f5f5;
+    font-weight: 500;
+}
+
+.order-summary table tfoot tr {
+    font-weight: 500;
+}
+
+.order-summary table tfoot tr.total {
+    font-size: 18px;
+    color: #333;
+}
+
+/* ปุ่มกลับไปยังหน้าหลัก */
+.confirmation-footer {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.back-to-home {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #4ECDC4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.back-to-home:hover {
+    background-color: #3DB0A7;
+}
+
+.confirmation-footer .btn {
+    padding: 15px 30px;
+    font-size: 16px;
+}
+
+.order-totals {
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+}
+
+.order-total-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.order-total-row.final {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .order-details {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .order-number {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .order-info-boxes {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .confirmation-container {
+        padding: 20px;
+    }
+    
+    .confirmation-header .check-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .confirmation-header .check-icon i {
+        font-size: 30px;
+    }
+    
+    .confirmation-header h2 {
+        font-size: 24px;
+    }
+    
+    .order-item {
+        flex-wrap: wrap;
+        padding: 10px 0;
+    }
+    
+    .order-item-name {
+        flex: 100%;
+        margin-bottom: 5px;
+    }
+    
+    .order-item-quantity {
+        flex: 1;
+        text-align: left;
+    }
+    
+    .breadcrumb ul li {
+        font-size: 13px;
+    }
+    
+    .breadcrumb ul li:not(:last-child) {
+        margin-right: 20px;
+    }
+    
+    .breadcrumb ul li:not(:last-child)::after {
+        right: -13px;
+    }
+}

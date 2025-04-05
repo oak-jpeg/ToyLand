@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตะกร้าสินค้า - ToyLand</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="ToyLand Logo" width="150" height="auto">
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="ค้นหาของเล่น...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="cart-icon">
+                <a href="cart.html">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">หน้าหลัก</a></li>
+                <li><a href="#">ของเล่นเด็กเล็ก</a></li>
+                <li><a href="#">ของเล่นเสริมทักษะ</a></li>
+                <li><a href="#">ตุ๊กตา</a></li>
+                <li><a href="#">เกมกระดาน</a></li>
+                <li><a href="#">รถและยานพาหนะ</a></li>
+                <li><a href="#">โปรโมชั่น</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a href="index.html">หน้าหลัก</a></li>
+                <li><span>ตะกร้าสินค้า</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Cart Section -->
+    <section class="cart-section">
+        <div class="container">
+            <h1 class="page-title">ตะกร้าสินค้า</h1>
+            
+            <div class="cart-container">
+                <div class="cart-items-container">
+                    <div class="cart-header">
+                        <div class="cart-header-item">สินค้า</div>
+                        <div class="cart-header-price">ราคา</div>
+                        <div class="cart-header-quantity">จำนวน</div>
+                        <div class="cart-header-total">รวม</div>
+                        <div class="cart-header-remove"></div>
+                    </div>
+                    
+                    <div id="cart-items">
+                        <!-- Cart items will be loaded here by JavaScript -->
+                    </div>
+                </div>
+                
+                <div class="cart-summary-container" id="cart-summary">
+                    <!-- Cart summary will be loaded here by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>ToyLand</h3>
+                    <p>ร้านของเล่นออนไลน์ที่มีสินค้าคุณภาพดี ปลอดภัยสำหรับเด็กทุกวัย</p>
+                </div>
+                <div class="footer-col">
+                    <h3>ลิงก์ด่วน</h3>
+                    <ul>
+                        <li><a href="index.html">หน้าหลัก</a></li>
+                        <li><a href="#">เกี่ยวกับเรา</a></li>
+                        <li><a href="#">โปรโมชั่น</a></li>
+                        <li><a href="#">ติดต่อเรา</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>ติดต่อเรา</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 ถนนสุขุมวิท, กรุงเทพฯ</p>
+                    <p><i class="fas fa-phone"></i> 02-123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@toyland.com</p>
+                </div>
+                <div class="footer-col">
+                    <h3>ติดตามเรา</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-line"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 ToyLand. สงวนลิขสิทธิ์</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- เพิ่ม script สำหรับแก้ไขปัญหาการแสดงผลที่ซ้ำซ้อน -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // ลบองค์ประกอบที่ซ้ำซ้อน (ถ้ามี)
+            const duplicateElements = document.querySelectorAll('.breadcrumb + .breadcrumb, nav + nav');
+            duplicateElements.forEach(element => {
+                element.parentNode.removeChild(element);
+            });
+            
+            // ลบกล่องที่วงกลมไว้ในภาพ (ถ้ามี)
+            const circledElements = document.querySelectorAll('.duplicate-content, .circled-content');
+            circledElements.forEach(element => {
+                element.parentNode.removeChild(element);
+            });
+        });
+    </script>
+
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ชำระเงิน - ToyLand</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="ToyLand Logo" width="150" height="auto">
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="ค้นหาของเล่น...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="cart-icon">
+                <a href="cart.html">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">หน้าหลัก</a></li>
+                <li><a href="#">ของเล่นเด็กเล็ก</a></li>
+                <li><a href="#">ของเล่นเสริมทักษะ</a></li>
+                <li><a href="#">ตุ๊กตา</a></li>
+                <li><a href="#">เกมกระดาน</a></li>
+                <li><a href="#">รถและยานพาหนะ</a></li>
+                <li><a href="#">โปรโมชั่น</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a href="index.html">หน้าหลัก</a></li>
+                <li><a href="cart.html">ตะกร้าสินค้า</a></li>
+                <li><span>ชำระเงิน</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Checkout Section -->
+    <section class="checkout-section">
+        <div class="container">
+            <h1 class="page-title">ชำระเงิน</h1>
+            
+            <div class="checkout-container">
+                <div class="checkout-form-container">
+                    <form id="checkout-form">
+                        <div class="form-section">
+                            <h3>ข้อมูลการจัดส่ง</h3>
+                            <div class="form-group">
+                                <label for="fullname">ชื่อ-นามสกุล *</label>
+                                <input type="text" id="fullname" name="fullname" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">อีเมล *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">เบอร์โทรศัพท์ *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="address">ที่อยู่ *</label>
+                                <textarea id="address" name="address" rows="3" required></textarea>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="province">จังหวัด *</label>
+                                    <input type="text" id="province" name="province" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="postal-code">รหัสไปรษณีย์ *</label>
+                                    <input type="text" id="postal-code" name="postal-code" required>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3>วิธีการชำระเงิน</h3>
+                            <div class="payment-methods">
+                                <div class="payment-method">
+                                    <input type="radio" id="credit-card" name="payment" value="credit-card" checked>
+                                    <label for="credit-card">
+                                        <i class="fas fa-credit-card"></i>
+                                        <span>บัตรเครดิต/เดบิต</span>
+                                    </label>
+                                </div>
+                                <div class="payment-method">
+                                    <input type="radio" id="bank-transfer" name="payment" value="bank-transfer">
+                                    <label for="bank-transfer">
+                                        <i class="fas fa-university"></i>
+                                        <span>โอนเงินผ่านธนาคาร</span>
+                                    </label>
+                                </div>
+                                <div class="payment-method">
+                                    <input type="radio" id="prompt-pay" name="payment" value="prompt-pay">
+                                    <label for="prompt-pay">
+                                        <i class="fas fa-qrcode"></i>
+                                        <span>พร้อมเพย์</span>
+                                    </label>
+                                </div>
+                                <div class="payment-method">
+                                    <input type="radio" id="cod" name="payment" value="cod">
+                                    <label for="cod">
+                                        <i class="fas fa-money-bill-wave"></i>
+                                        <span>เก็บเงินปลายทาง</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn checkout-btn">ยืนยันการสั่งซื้อ</button>
+                    </form>
+                </div>
+                
+                <div class="order-summary-container">
+                    <div class="order-summary" id="order-summary">
+                        <!-- Order summary will be loaded here by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>ToyLand</h3>
+                    <p>ร้านของเล่นออนไลน์ที่มีสินค้าคุณภาพดี ปลอดภัยสำหรับเด็กทุกวัย</p>
+                </div>
+                <div class="footer-col">
+                    <h3>ลิงก์ด่วน</h3>
+                    <ul>
+                        <li><a href="index.html">หน้าหลัก</a></li>
+                        <li><a href="#">เกี่ยวกับเรา</a></li>
+                        <li><a href="#">โปรโมชั่น</a></li>
+                        <li><a href="#">ติดต่อเรา</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>ติดต่อเรา</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 ถนนสุขุมวิท, กรุงเทพฯ</p>
+                    <p><i class="fas fa-phone"></i> 02-123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@toyland.com</p>
+                </div>
+                <div class="footer-col">
+                    <h3>ติดตามเรา</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-line"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 ToyLand. สงวนลิขสิทธิ์</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>
